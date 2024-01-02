@@ -163,8 +163,8 @@ if (isset($_POST["reset"])) {
 
         ?>
         <script>
-            window.location.replace("index.php");
-            alert("<?php echo "Your password has been successfully reset"; ?>");
+            window.location.replace("otp_verification.php");
+            alert("<?php echo "OTP sent to " . $email; ?>");
         </script>
         <?php
     }
