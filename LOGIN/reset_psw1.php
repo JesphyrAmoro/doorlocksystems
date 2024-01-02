@@ -173,18 +173,19 @@ if (isset($_POST["reset"])) {
 
 
 
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-    const toggle = document.getElementById('togglePassword');
-    const password = document.getElementById('password');
-    const confirmpassword = document.getElementById('confirmpassword');
+    document.addEventListener('DOMContentLoaded', function () {
+        const togglePassword = document.getElementById('togglePassword');
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirmpassword');
 
-    toggle.addEventListener('click', function () {
-        if (password.type === "password") {
-            password.type = 'text';
-        } else {
-            password.type = 'password';
-            confirmpassword.type = 'password';
-        }
-        this.classList.toggle('bi-eye');
+        togglePassword.addEventListener('click', function () {
+            const type = password.type === 'password' ? 'text' : 'password';
+            password.type = type;
+            confirmPassword.type = type;
+            this.classList.toggle('bi-eye');
+        });
     });
 </script>
